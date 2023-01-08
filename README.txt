@@ -11,6 +11,12 @@ clickteam games even works and just for fun.
 
 contributions are welcome, i guess...
 
+credits:
+
+- anaconda developers
+  (i feel like i will do 95% of the stuff
+   based on anaconda code)
+
 license:
 
 sfarx is licensed under unlicense license.

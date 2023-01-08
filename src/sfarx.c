@@ -1,25 +1,27 @@
 #include "raylib.h"
+#include <stdio.h>
+#include <sfarx.h>
+#include <mz.h>
 
-int screenWidth = 800;
-int screenHeight = 450;
-
-void UpdateDrawFrame(void);
-
-int main()
+int main(void)
 {
-    InitWindow(screenWidth, screenHeight, "sfarx");
+    /*
+    InitWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "sfarx");
     SetTargetFPS(60);
 
     while (!WindowShouldClose())
-    {
-        UpdateDrawFrame();
-    }
+        update();
 
     CloseWindow();
+    */
+
+    FILE *ptr = fopen("/home/mikhail/Spark The Electric Jester.exe", "r");
+    mz_t mz = mz_read(ptr);
+
     return 0;
 }
 
-void UpdateDrawFrame(void)
+void update(void)
 {
     BeginDrawing();
 

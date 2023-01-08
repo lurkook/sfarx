@@ -20,10 +20,11 @@ if (NOT raylib_FOUND)
   endif()
 endif()
 
-set(SOURCE src/sfarx.c)
+include_directories(include/)
 
-add_executable(${PROJECT_NAME} ${SOURCE})
-#set(raylib_VERBOSE 1)
+file(GLOB SFARX_SOURCES CONFIGURE_DEPENDS include/*.h src/*.c)
+add_executable(${PROJECT_NAME} ${SFARX_SOURCES})
+
 target_link_libraries(${PROJECT_NAME} raylib)
 
 if (APPLE)
